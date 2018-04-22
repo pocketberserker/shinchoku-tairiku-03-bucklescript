@@ -1,0 +1,32 @@
+{
+  "name": "ssc",
+  "version": "0.0.1",
+  "description": "Simple S-expression Compiler",
+  "bin": {
+    "ssc": "./bin/run"
+  },
+  "files": [
+    "bin",
+    "lib/js/src",
+    "src",
+    "bsconfig.json"
+  ],
+  "scripts": {
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch": "bsb -make-world -w",
+    "test": "npm run build && jest --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.4.2",
+    "bs-glob": "0.1.1",
+    "bs-platform": "2.2.3"
+  },
+  "dependencies": {
+    "escodegen": "1.9.1",
+    "minimist.re": "0.0.5"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "ssc",
+  "version": "0.0.1",
+  "generators" : [
+    {
+      "name" : "ocamllex" ,
+      "command" : "ocamllex $in"
+    },
+    {
+      "name" : "menhir" ,
+      "command" : "menhir $in"
+    }
+  ],
+  "sources": [
+    {
+      "dir": "src",
+      "generators" : [
+        {
+          "name" : "ocamllex",
+          "edge" : ["lexer.ml", ":", "lexer.mll"]
+        },
+        {
+          "name" : "menhir",
+          "edge" : ["parser.ml", "parser.mli", ":", "parser.mly"]
+        }
+      ]
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev"
+    }
+  ],
+  "package-specs": {
+    "module": "commonjs"
+  },
+  "refmt": 3,
+  "suffix": ".js",
+  "bs-dependencies": [
+    "minimist.re"
+  ],
+  "bs-dev-dependencies": [
+    "@glennsl/bs-jest",
+    "bs-glob"
+  ]
+}
