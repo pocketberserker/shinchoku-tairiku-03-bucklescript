@@ -86,8 +86,6 @@ typings/
 # dotenv environment variables file
 .env
 
-
-
 # End of https://www.gitignore.io/api/node
 
 .DS_Store
@@ -97,3 +95,4 @@ parser.ml
 lexer.mli
 lexer.ml
 package-lock.json
+dist/
