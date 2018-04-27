@@ -2,6 +2,14 @@
 
 単純なS式をJavaScriptに変換するコンパイラです。
 
+## Requirements
+
+* Node.js >= 8.x
+* npm
+* opam
+* OCaml 4.02
+* menhir
+
 ## How to build
 
 ```
@@ -14,4 +22,3 @@ npm run watch
 ```
 npm test
 ```
-
